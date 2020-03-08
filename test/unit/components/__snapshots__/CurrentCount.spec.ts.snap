@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/CurrentCount should be expected 1 1`] = `
+"<div data-test=\\"current-count\\" class=\\"currentCountArea\\">
+  Count: 1
+</div>"
+`;
+
+exports[`components/CurrentCount should be expected 3 1`] = `
+"<div data-test=\\"current-count\\" class=\\"currentCountArea\\">
+  Count: 3
+</div>"
+`;
