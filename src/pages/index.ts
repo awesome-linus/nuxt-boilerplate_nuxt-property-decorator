@@ -1,18 +1,19 @@
-import Vue from 'vue';
+import { Component, Vue } from 'nuxt-property-decorator';
 import { mapGetters } from 'vuex';
 import CurrentCount from '~/components/CurrentCount';
 import IncrementButton from '~/components/IncrementButton';
 import AsyncIncrementButton from '~/components/AsyncIncrementButton';
 import DecrementButton from '~/components/DecrementButton';
 
-export default Vue.extend({
+@Component({
+  computed: {
+    ...mapGetters('counter', ['currentCount'])
+  },
   components: {
     CurrentCount,
     AsyncIncrementButton,
     IncrementButton,
     DecrementButton
-  },
-  computed: {
-    ...mapGetters('counter', ['currentCount'])
   }
-});
+})
+export default class extends Vue {}

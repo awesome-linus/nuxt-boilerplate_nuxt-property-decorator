@@ -1,12 +1,11 @@
-import Vue from 'vue';
+import { Prop, Component, Vue } from 'nuxt-property-decorator';
 
-export default Vue.extend({
-  name: 'CurrentCount',
-  props: {
-    count: {
-      type: Number,
-      default: 0,
-      required: true
-    }
-  }
-});
+@Component
+export default class extends Vue {
+  @Prop({
+    type: Number,
+    required: true,
+    default: 0
+  })
+  count!: number;
+}
